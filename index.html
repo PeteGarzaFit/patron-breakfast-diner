@@ -14,8 +14,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..600&family=Karla:wght@400;500;600;700&display=swap">
-  <link rel="preload" as="image" href="img/breakfast-800.jpg" imagesrcset="img/breakfast-800.jpg 800w, img/breakfast-1400.jpg 1400w" imagesizes="(min-width: 960px) 42vw, 88vw" fetchpriority="high">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..800;1,9..144,300..600&family=Karla:wght@400;500;600;700&family=Yellowtail&display=swap">
+  <link rel="preload" as="image" href="img/breakfast-800.jpg" imagesrcset="img/breakfast-800.jpg 800w, img/breakfast-1400.jpg 1400w" imagesizes="(min-width: 960px) 38vw, 80vw" fetchpriority="high">
   <link rel="stylesheet" href="styles.css">
   <script>document.documentElement.classList.add('js')</script>
 
@@ -49,6 +49,23 @@
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Reusable icons -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="4.5" fill="currentColor"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3M4.9 4.9l2.1 2.1M17 17l2.1 2.1M4.9 19.1 7 17M17 7l2.1-2.1" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-cup" viewBox="0 0 24 24"><path d="M4 10h13v3a6.5 6.5 0 0 1-13 0z" fill="currentColor"/><path d="M17 11h1.5a2.5 2.5 0 0 1 0 5H17" fill="none" stroke="currentColor" stroke-width="2"/><path d="M8.5 7.5c-1.5-2 1.5-3 0-5M12.5 7.5c-1.5-2 1.5-3 0-5" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></symbol>
+    <symbol id="i-chili" viewBox="0 0 24 24"><path d="M17 7c2 3 0 9-5 12-3 1.8-7 2-8 1s2-2 4-4 4-6 5-8 2-2.5 4-1z" fill="currentColor"/><path d="M16 7c0-2 1-3.5 3-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></symbol>
+    <symbol id="i-egg" viewBox="0 0 24 24"><path d="M12 3c3 0 7 3 8 8s-3 10-9 10-9-4-8-8 3-4 5-6 1-4 4-4z" fill="currentColor" opacity=".35"/><circle cx="12" cy="13" r="4" fill="currentColor"/></symbol>
+    <symbol id="i-star" viewBox="0 0 24 24"><path d="m12 2 2.9 6.6 7.1.7-5.4 4.8 1.6 7L12 17.4 5.8 21l1.6-7L2 9.3l7.1-.7z" fill="currentColor"/></symbol>
+    <symbol id="i-arrow-ne" viewBox="0 0 24 24"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-arrow-r" viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></symbol>
+    <symbol id="i-phone" viewBox="0 0 24 24"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></symbol>
+    <symbol id="i-pin" viewBox="0 0 24 24"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 7h12l-1 13H7zM9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></symbol>
+    <!-- Papel picado flag: zig-zag bottom + cut-outs (evenodd) -->
+    <symbol id="flag" viewBox="0 0 80 72"><path fill-rule="evenodd" d="M0 0H80V62L74 70 68 62 62 70 56 62 50 70 44 62 38 70 32 62 26 70 20 62 14 70 8 62 2 70 0 67Z M40 12l10 12-10 12-10-12Z M16 16l5 6-5 6-5-6Z M64 16l5 6-5 6-5-6Z M16 40l5 6-5 6-5-6Z M64 40l5 6-5 6-5-6Z M40 42l6 7-6 7-6-7Z M28 8h4v4h-4Z M48 8h4v4h-4Z"/></symbol>
+  </svg>
 
   <!-- ============ HEADER ============ -->
   <header class="nav" data-nav>
@@ -101,59 +118,88 @@
     <!-- ============ HERO ============ -->
     <section class="hero" id="top" aria-labelledby="hero-title">
       <div class="hero__sky" aria-hidden="true"></div>
+      <div class="hero__rays" aria-hidden="true"></div>
       <div class="hero__sun" aria-hidden="true"></div>
+      <div class="gulls" aria-hidden="true">
+        <svg class="gull gull--1" viewBox="0 0 24 10"><path d="M1 8 Q6 1 12 7 Q18 1 23 8"/></svg>
+        <svg class="gull gull--2" viewBox="0 0 24 10"><path d="M1 8 Q6 1 12 7 Q18 1 23 8"/></svg>
+        <svg class="gull gull--3" viewBox="0 0 24 10"><path d="M1 8 Q6 1 12 7 Q18 1 23 8"/></svg>
+      </div>
 
       <div class="hero__grid container">
         <div class="hero__copy">
-          <p class="eyebrow hero__eyebrow">
+          <p class="hero__eyebrow">
             <span class="status" data-status><span class="status__dot"></span><span data-status-text>Open daily 7am – 3pm</span></span>
           </p>
           <h1 class="hero__title" id="hero-title">
-            <span class="line"><span>Buenos días,</span></span>
-            <span class="line"><em>Kemah.</em></span>
+            <span class="line line--script"><span>Buenos días,</span></span>
+            <span class="line line--big"><span>Kemah<span class="dot">.</span></span></span>
+            <svg class="hero__squiggle" viewBox="0 0 320 24" aria-hidden="true"><path d="M4 16 C 50 4, 90 24, 140 12 S 230 2, 316 14"/></svg>
           </h1>
           <p class="hero__lede">
             Classic American breakfast and Mexican comfort food, served warm right off Highway&nbsp;146. Pancakes and omelets, chilaquiles and menudo. Pull up a chair.
           </p>
           <div class="hero__actions">
-            <a class="btn btn--primary" href="#order-online" data-order-link target="_blank" rel="noopener">
-              Order online
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+            <a class="btn btn--primary btn--lg" href="#order-online" data-order-link target="_blank" rel="noopener">
+              Order online <svg aria-hidden="true"><use href="#i-arrow-ne"/></svg>
             </a>
-            <a class="btn btn--ghost" href="#menu">Explore the menu</a>
+            <a class="btn btn--ghost btn--lg" href="#menu">Explore the menu</a>
           </div>
         </div>
 
-        <figure class="hero__media">
+        <div class="hero__media">
           <div class="arch">
             <img src="img/breakfast-800.jpg"
                  srcset="img/breakfast-800.jpg 800w, img/breakfast-1400.jpg 1400w"
-                 sizes="(min-width: 960px) 42vw, 88vw"
+                 sizes="(min-width: 960px) 38vw, 80vw"
                  width="800" height="600"
                  alt="Two eggs over easy with crispy hash browns, bacon and a sausage link on a white plate"
                  fetchpriority="high">
           </div>
-          <figcaption class="hero__badge">
-            <span class="hero__badge-k">Est.</span>
-            <span class="hero__badge-v">2024</span>
-          </figcaption>
-        </figure>
+
+          <figure class="snap snap--a">
+            <div class="snap__inner">
+              <img src="img/nachos-800.jpg" width="800" height="600" alt="Nachos Grande" decoding="async">
+              <figcaption>Nachos Grande!</figcaption>
+            </div>
+          </figure>
+          <figure class="snap snap--b">
+            <div class="snap__inner">
+              <img src="img/burger-800.jpg" width="800" height="600" alt="Cheeseburger and crinkle fries" decoding="async">
+              <figcaption>Burger o'clock</figcaption>
+            </div>
+          </figure>
+
+          <div class="seal seal--hero" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="seal-path-1" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <circle cx="100" cy="100" r="98" class="seal__bg"/>
+              <g class="seal__spin"><text><textPath href="#seal-path-1" textLength="462">BREAKFAST · LUNCH · KEMAH, TEXAS · EST. 2024 ·</textPath></text></g>
+              <use href="#i-cup" x="70" y="66" width="60" height="60" class="seal__icon"/>
+            </svg>
+          </div>
+        </div>
       </div>
 
       <svg class="waves" viewBox="0 0 2880 160" preserveAspectRatio="none" aria-hidden="true">
         <g class="waves__back"><path d="M0 70 C360 20 360 120 720 70 C1080 20 1080 120 1440 70 C1800 20 1800 120 2160 70 C2520 20 2520 120 2880 70 V160 H0Z"/></g>
-        <g class="waves__front"><path d="M0 100 C360 60 360 140 720 100 C1080 60 1080 140 1440 100 C1800 60 1800 140 2160 100 C2520 60 2520 140 2880 100 V160 H0Z"/></g>
+        <g class="waves__mid"><path d="M0 90 C360 50 360 130 720 90 C1080 50 1080 130 1440 90 C1800 50 1800 130 2160 90 C2520 50 2520 130 2880 90 V160 H0Z"/></g>
+        <g class="waves__front"><path d="M0 110 C360 80 360 140 720 110 C1080 80 1080 140 1440 110 C1800 80 1800 140 2160 110 C2520 80 2520 140 2880 110 V160 H0Z"/></g>
       </svg>
     </section>
 
-    <!-- ============ MARQUEE ============ -->
+    <!-- ============ CROSSING MARQUEES ============ -->
     <div class="marquee" data-marquee>
-      <div class="marquee__track" aria-hidden="true">
-        <div class="marquee__group">
-          <span>Fluffy Pancakes</span><i>✦</i><span>Menudo</span><i>✦</i><span>Chilaquiles</span><i>✦</i><span>Savory Omelets</span><i>✦</i><span>Breakfast Tacos</span><i>✦</i><span>Nachos Grande</span><i>✦</i><span>Juicy Burgers</span><i>✦</i><span>Huevos Rancheros</span><i>✦</i>
+      <div class="marquee__band marquee__band--teal" aria-hidden="true">
+        <div class="marquee__track marquee__track--rev">
+          <div class="marquee__group"><span>Café de olla</span><svg><use href="#i-cup"/></svg><span>Hash browns</span><svg><use href="#i-sun"/></svg><span>Horchata</span><svg><use href="#i-cup"/></svg><span>Biscuits &amp; gravy</span><svg><use href="#i-sun"/></svg><span>Migas</span><svg><use href="#i-cup"/></svg><span>French toast</span><svg><use href="#i-sun"/></svg></div>
+          <div class="marquee__group"><span>Café de olla</span><svg><use href="#i-cup"/></svg><span>Hash browns</span><svg><use href="#i-sun"/></svg><span>Horchata</span><svg><use href="#i-cup"/></svg><span>Biscuits &amp; gravy</span><svg><use href="#i-sun"/></svg><span>Migas</span><svg><use href="#i-cup"/></svg><span>French toast</span><svg><use href="#i-sun"/></svg></div>
         </div>
-        <div class="marquee__group">
-          <span>Fluffy Pancakes</span><i>✦</i><span>Menudo</span><i>✦</i><span>Chilaquiles</span><i>✦</i><span>Savory Omelets</span><i>✦</i><span>Breakfast Tacos</span><i>✦</i><span>Nachos Grande</span><i>✦</i><span>Juicy Burgers</span><i>✦</i><span>Huevos Rancheros</span><i>✦</i>
+      </div>
+      <div class="marquee__band marquee__band--coral" aria-hidden="true">
+        <div class="marquee__track">
+          <div class="marquee__group"><span>Fluffy pancakes</span><svg><use href="#i-egg"/></svg><span>Menudo</span><svg><use href="#i-chili"/></svg><span>Chilaquiles</span><svg><use href="#i-egg"/></svg><span>Savory omelets</span><svg><use href="#i-chili"/></svg><span>Breakfast tacos</span><svg><use href="#i-egg"/></svg><span>Nachos grande</span><svg><use href="#i-chili"/></svg></div>
+          <div class="marquee__group"><span>Fluffy pancakes</span><svg><use href="#i-egg"/></svg><span>Menudo</span><svg><use href="#i-chili"/></svg><span>Chilaquiles</span><svg><use href="#i-egg"/></svg><span>Savory omelets</span><svg><use href="#i-chili"/></svg><span>Breakfast tacos</span><svg><use href="#i-egg"/></svg><span>Nachos grande</span><svg><use href="#i-chili"/></svg></div>
         </div>
       </div>
       <button class="marquee__toggle" type="button" data-marquee-toggle aria-pressed="false">
@@ -164,30 +210,42 @@
     </div>
 
     <!-- ============ TWO TRADITIONS ============ -->
-    <section class="section traditions" aria-labelledby="trad-title">
+    <section class="section traditions grain" aria-labelledby="trad-title">
       <div class="container">
-        <header class="section__head" data-reveal>
+        <header class="section__head section__head--center" data-reveal>
           <p class="eyebrow">Two traditions, one table</p>
-          <h2 id="trad-title">A diner menu with a Gulf Coast <em>accent</em>.</h2>
+          <h2 id="trad-title">A diner menu with a <span class="script">Gulf Coast</span> accent.</h2>
         </header>
 
         <div class="traditions__grid">
-          <article class="tcard" data-reveal style="--i:0">
+          <article class="tcard tcard--diner" data-reveal style="--i:0">
+            <div class="checker" aria-hidden="true"></div>
             <svg class="tcard__icon" viewBox="0 0 48 48" aria-hidden="true">
               <ellipse cx="24" cy="34" rx="18" ry="5"/><ellipse cx="24" cy="28" rx="16" ry="4.5"/><ellipse cx="24" cy="22" rx="14" ry="4"/>
               <path d="M20 18c0-3 8-3 8 0" /><path d="M31 21c3 2 3 7 1 11"/>
             </svg>
+            <p class="tcard__kicker">Since sunrise</p>
             <h3>The American Diner</h3>
             <p>The breakfasts you grew up on. Short stacks with warm syrup, three-egg omelets, crispy hash browns and a hot cup of coffee that keeps getting refilled.</p>
             <ul class="chips" role="list"><li>Pancakes</li><li>Omelets</li><li>Biscuits &amp; Gravy</li><li>Burgers</li></ul>
           </article>
 
-          <div class="traditions__amp" aria-hidden="true" data-reveal style="--i:1">&amp;</div>
+          <div class="traditions__amp" aria-hidden="true" data-reveal style="--i:1"><span>&amp;</span></div>
 
-          <article class="tcard tcard--warm" data-reveal style="--i:2">
+          <article class="tcard tcard--cocina" data-reveal style="--i:2">
+            <svg class="picado picado--card" viewBox="0 0 600 96" preserveAspectRatio="xMidYMin meet" aria-hidden="true">
+              <path class="picado__string" d="M-10 6 Q300 34 610 6"/>
+              <g transform="translate(20 8)"><use href="#flag" class="flag f1" width="80" height="72"/></g>
+              <g transform="translate(115 14)"><use href="#flag" class="flag f2" width="80" height="72"/></g>
+              <g transform="translate(210 18)"><use href="#flag" class="flag f3" width="80" height="72"/></g>
+              <g transform="translate(305 18)"><use href="#flag" class="flag f4" width="80" height="72"/></g>
+              <g transform="translate(400 14)"><use href="#flag" class="flag f5" width="80" height="72"/></g>
+              <g transform="translate(495 8)"><use href="#flag" class="flag f1" width="80" height="72"/></g>
+            </svg>
             <svg class="tcard__icon" viewBox="0 0 48 48" aria-hidden="true">
               <path d="M6 22h36a18 14 0 0 1-36 0z"/><path d="M14 16c-2-3 2-4 0-7M24 16c-2-3 2-4 0-7M34 16c-2-3 2-4 0-7"/><path d="M12 42h24"/>
             </svg>
+            <p class="tcard__kicker">Hecho con cariño</p>
             <h3>La Cocina Mexicana</h3>
             <p>Slow-simmered, big-hearted comfort food. Rich red menudo, saucy chilaquiles, and breakfast tacos wrapped in warm flour tortillas.</p>
             <ul class="chips" role="list"><li>Menudo</li><li>Chilaquiles</li><li>Migas</li><li>Breakfast Tacos</li></ul>
@@ -198,15 +256,14 @@
 
     <!-- ============ SIGNATURE PLATES ============ -->
     <section class="section plates" aria-labelledby="plates-title">
+      <div class="plates__glow" aria-hidden="true"></div>
       <div class="container">
         <header class="section__head section__head--split" data-reveal>
           <div>
-            <p class="eyebrow">From our kitchen</p>
-            <h2 id="plates-title">Plates people <em>come back</em> for.</h2>
+            <p class="eyebrow eyebrow--light">From our kitchen</p>
+            <h2 id="plates-title">Plates people <span class="script">come back</span> for.</h2>
           </div>
-          <a class="link-arrow" href="#menu">See the full menu
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-          </a>
+          <a class="link-arrow link-arrow--light" href="#menu">See the full menu <svg aria-hidden="true"><use href="#i-arrow-r"/></svg></a>
         </header>
 
         <div class="plates__grid">
@@ -214,97 +271,106 @@
             <div class="plate__img">
               <img src="img/nachos-800.jpg" srcset="img/nachos-800.jpg 800w, img/nachos-1400.jpg 1400w" sizes="(min-width: 960px) 45vw, 92vw" width="800" height="600" loading="lazy" decoding="async" alt="Nachos Grande piled with lettuce, pico de gallo, jalapeños, crema and guacamole">
             </div>
-            <figcaption><span class="plate__tag">House famous</span><strong>Nachos Grande</strong></figcaption>
+            <figcaption><span class="plate__num">01</span><span class="plate__tag">House famous</span><strong>Nachos Grande</strong></figcaption>
+            <div class="sticker" aria-hidden="true"><svg><use href="#i-star"/></svg><span>Famous!</span></div>
           </figure>
 
           <figure class="plate" data-reveal style="--i:1">
             <div class="plate__img">
               <img src="img/breakfast-800.jpg" srcset="img/breakfast-800.jpg 800w, img/breakfast-1400.jpg 1400w" sizes="(min-width: 960px) 28vw, 92vw" width="800" height="600" loading="lazy" decoding="async" alt="Two-egg breakfast with bacon, sausage and hash browns">
             </div>
-            <figcaption><span class="plate__tag">All morning</span><strong>Two-Egg Breakfast</strong></figcaption>
+            <figcaption><span class="plate__num">02</span><span class="plate__tag">All morning</span><strong>Two-Egg Breakfast</strong></figcaption>
           </figure>
 
           <figure class="plate" data-reveal style="--i:2">
             <div class="plate__img">
               <img src="img/burger-800.jpg" srcset="img/burger-800.jpg 800w, img/burger-1400.jpg 1400w" sizes="(min-width: 960px) 28vw, 92vw" width="800" height="600" loading="lazy" decoding="async" alt="Cheeseburger with lettuce, tomato and red onion beside a pile of crinkle-cut fries">
             </div>
-            <figcaption><span class="plate__tag">Lunch</span><strong>Classic Cheeseburger</strong></figcaption>
+            <figcaption><span class="plate__num">03</span><span class="plate__tag">Lunch</span><strong>Classic Cheeseburger</strong></figcaption>
           </figure>
 
           <figure class="plate plate--wide" data-reveal style="--i:3">
             <div class="plate__img">
               <img src="img/beans-rice-wide-800.jpg" srcset="img/beans-rice-wide-800.jpg 800w, img/beans-rice-wide-1400.jpg 1400w" sizes="(min-width: 960px) 56vw, 92vw" width="800" height="600" loading="lazy" decoding="async" alt="A bowl of slow-cooked charro beans topped with a dome of white rice and fresh parsley">
             </div>
-            <figcaption><span class="plate__tag">Comfort bowl</span><strong>Charro Beans &amp; Rice</strong></figcaption>
+            <figcaption><span class="plate__num">04</span><span class="plate__tag">Comfort bowl</span><strong>Charro Beans &amp; Rice</strong></figcaption>
           </figure>
         </div>
       </div>
     </section>
 
     <!-- ============ MENU ============ -->
-    <section class="section menu" id="menu" aria-labelledby="menu-title">
+    <section class="section menu grain" id="menu" aria-labelledby="menu-title">
+      <div class="awning" aria-hidden="true"></div>
       <div class="container container--narrow">
         <header class="section__head section__head--center" data-reveal>
           <p class="eyebrow">The menu</p>
-          <h2 id="menu-title">Something for every <em>kind of morning</em>.</h2>
+          <h2 id="menu-title">Something for every <span class="script">kind of morning</span>.</h2>
         </header>
 
-        <div class="tabs" data-tabs data-reveal>
-          <div class="tabs__list" role="tablist" aria-label="Menu categories">
-            <button role="tab" id="tab-breakfast" aria-controls="panel-breakfast" aria-selected="true">Breakfast</button>
-            <button role="tab" id="tab-mexicana" aria-controls="panel-mexicana" aria-selected="false" tabindex="-1">Cocina Mexicana</button>
-            <button role="tab" id="tab-lunch" aria-controls="panel-lunch" aria-selected="false" tabindex="-1">Lunch</button>
-            <button role="tab" id="tab-sweets" aria-controls="panel-sweets" aria-selected="false" tabindex="-1">Sweets &amp; Sips</button>
-            <span class="tabs__ink" aria-hidden="true"></span>
+        <div class="menu__card" data-reveal>
+          <span class="menu__corner menu__corner--tl" aria-hidden="true"></span>
+          <span class="menu__corner menu__corner--tr" aria-hidden="true"></span>
+          <span class="menu__corner menu__corner--bl" aria-hidden="true"></span>
+          <span class="menu__corner menu__corner--br" aria-hidden="true"></span>
+
+          <div class="tabs" data-tabs>
+            <div class="tabs__list" role="tablist" aria-label="Menu categories">
+              <button role="tab" id="tab-breakfast" aria-controls="panel-breakfast" aria-selected="true">Breakfast</button>
+              <button role="tab" id="tab-mexicana" aria-controls="panel-mexicana" aria-selected="false" tabindex="-1">Cocina Mexicana</button>
+              <button role="tab" id="tab-lunch" aria-controls="panel-lunch" aria-selected="false" tabindex="-1">Lunch</button>
+              <button role="tab" id="tab-sweets" aria-controls="panel-sweets" aria-selected="false" tabindex="-1">Sweets &amp; Sips</button>
+              <span class="tabs__ink" aria-hidden="true"></span>
+            </div>
+
+            <!-- NOTE: Menu items below are drafted from the diner's description and photos.
+                 Confirm names, descriptions and add prices with the owner before launch. -->
+            <div class="tabs__panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0">
+              <ul class="menu__list" role="list">
+                <li><h3>Two-Egg Breakfast <svg class="fav" aria-label="Favorite"><use href="#i-star"/></svg></h3><p>Eggs any style with bacon or sausage, crispy hash browns and toast.</p></li>
+                <li><h3>Fluffy Pancakes</h3><p>Short or tall stack, whipped butter and warm maple syrup.</p></li>
+                <li><h3>Build-Your-Own Omelet</h3><p>Three eggs folded with your choice of fillings, served with hash browns and toast.</p></li>
+                <li><h3>Biscuits &amp; Gravy</h3><p>Buttermilk biscuits smothered in peppery country sausage gravy.</p></li>
+                <li><h3>French Toast</h3><p>Thick-cut, golden and dusted with powdered sugar.</p></li>
+                <li><h3>Hash Brown Skillet</h3><p>Crispy hash browns, eggs, cheese and your choice of meat.</p></li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-mexicana" aria-labelledby="tab-mexicana" tabindex="0" hidden>
+              <ul class="menu__list" role="list">
+                <li><h3>Menudo <span class="tag">House favorite</span></h3><p>Slow-simmered beef tripe and hominy in a rich red chile broth, with onion, cilantro, oregano, lime and warm tortillas.</p></li>
+                <li><h3>Chilaquiles</h3><p>Crisp tortilla chips tossed in salsa roja or verde, topped with eggs, queso fresco and crema.</p></li>
+                <li><h3>Huevos Rancheros</h3><p>Fried eggs over corn tortillas with ranchero sauce, beans and rice.</p></li>
+                <li><h3>Breakfast Tacos</h3><p>Warm flour tortillas with egg and your pick: potato, bacon, chorizo, or bean and cheese.</p></li>
+                <li><h3>Migas</h3><p>Eggs scrambled with tortilla strips, peppers, onion and melted cheese.</p></li>
+                <li><h3>Charro Beans &amp; Rice</h3><p>Slow-cooked pinto beans with savory bits, served with a dome of white rice.</p></li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-lunch" aria-labelledby="tab-lunch" tabindex="0" hidden>
+              <ul class="menu__list" role="list">
+                <li><h3>Nachos Grande <span class="tag">Famous</span></h3><p>A mountain of chips with lettuce, pico de gallo, jalapeños, crema and guacamole.</p></li>
+                <li><h3>Classic Cheeseburger</h3><p>Griddled beef patty, American cheese, lettuce, tomato and red onion, with crinkle-cut fries.</p></li>
+                <li><h3>Crispy Chicken Salad</h3><p>Crisp greens, tomato, cheese and golden fried chicken with your choice of dressing.</p></li>
+                <li><h3>Quesadilla</h3><p>A grilled flour tortilla packed with melted cheese and your choice of filling.</p></li>
+              </ul>
+            </div>
+
+            <div class="tabs__panel" role="tabpanel" id="panel-sweets" aria-labelledby="tab-sweets" tabindex="0" hidden>
+              <ul class="menu__list" role="list">
+                <li><h3>Homemade Desserts</h3><p>Baked in-house. Ask your server what's fresh today.</p></li>
+                <li><h3>Fresh-Brewed Coffee</h3><p>Hot, strong and bottomless.</p></li>
+                <li><h3>Café de Olla</h3><p>Spiced with cinnamon and piloncillo.</p></li>
+                <li><h3>Horchata</h3><p>Sweet, creamy and cinnamon-kissed.</p></li>
+                <li><h3>Orange Juice</h3><p>Bright, cold and the perfect start.</p></li>
+              </ul>
+            </div>
           </div>
 
-          <!-- NOTE: Menu items below are drafted from the diner's description and photos.
-               Confirm names, descriptions and add prices with the owner before launch. -->
-          <div class="tabs__panel" role="tabpanel" id="panel-breakfast" aria-labelledby="tab-breakfast" tabindex="0">
-            <ul class="menu__list" role="list">
-              <li><h3>Two-Egg Breakfast</h3><p>Eggs any style with bacon or sausage, crispy hash browns and toast.</p></li>
-              <li><h3>Fluffy Pancakes</h3><p>Short or tall stack, whipped butter and warm maple syrup.</p></li>
-              <li><h3>Build-Your-Own Omelet</h3><p>Three eggs folded with your choice of fillings, served with hash browns and toast.</p></li>
-              <li><h3>Biscuits &amp; Gravy</h3><p>Buttermilk biscuits smothered in peppery country sausage gravy.</p></li>
-              <li><h3>French Toast</h3><p>Thick-cut, golden and dusted with powdered sugar.</p></li>
-              <li><h3>Hash Brown Skillet</h3><p>Crispy hash browns, eggs, cheese and your choice of meat.</p></li>
-            </ul>
+          <div class="menu__foot">
+            <p class="menu__note"><span class="script">¡Provecho!</span> Ask about our daily specials. Menu and prices may vary.</p>
+            <a class="btn btn--primary" href="#order-online" data-order-link target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg> Order for pickup</a>
           </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-mexicana" aria-labelledby="tab-mexicana" tabindex="0" hidden>
-            <ul class="menu__list" role="list">
-              <li><h3>Menudo <span class="tag">House favorite</span></h3><p>Slow-simmered beef tripe and hominy in a rich red chile broth, with onion, cilantro, oregano, lime and warm tortillas.</p></li>
-              <li><h3>Chilaquiles</h3><p>Crisp tortilla chips tossed in salsa roja or verde, topped with eggs, queso fresco and crema.</p></li>
-              <li><h3>Huevos Rancheros</h3><p>Fried eggs over corn tortillas with ranchero sauce, beans and rice.</p></li>
-              <li><h3>Breakfast Tacos</h3><p>Warm flour tortillas with egg and your pick: potato, bacon, chorizo, or bean and cheese.</p></li>
-              <li><h3>Migas</h3><p>Eggs scrambled with tortilla strips, peppers, onion and melted cheese.</p></li>
-              <li><h3>Charro Beans &amp; Rice</h3><p>Slow-cooked pinto beans with savory bits, served with a dome of white rice.</p></li>
-            </ul>
-          </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-lunch" aria-labelledby="tab-lunch" tabindex="0" hidden>
-            <ul class="menu__list" role="list">
-              <li><h3>Nachos Grande <span class="tag">Famous</span></h3><p>A mountain of chips with lettuce, pico de gallo, jalapeños, crema and guacamole.</p></li>
-              <li><h3>Classic Cheeseburger</h3><p>Griddled beef patty, American cheese, lettuce, tomato and red onion, with crinkle-cut fries.</p></li>
-              <li><h3>Crispy Chicken Salad</h3><p>Crisp greens, tomato, cheese and golden fried chicken with your choice of dressing.</p></li>
-              <li><h3>Quesadilla</h3><p>A grilled flour tortilla packed with melted cheese and your choice of filling.</p></li>
-            </ul>
-          </div>
-
-          <div class="tabs__panel" role="tabpanel" id="panel-sweets" aria-labelledby="tab-sweets" tabindex="0" hidden>
-            <ul class="menu__list" role="list">
-              <li><h3>Homemade Desserts</h3><p>Baked in-house. Ask your server what's fresh today.</p></li>
-              <li><h3>Fresh-Brewed Coffee</h3><p>Hot, strong and bottomless.</p></li>
-              <li><h3>Café de Olla</h3><p>Spiced with cinnamon and piloncillo.</p></li>
-              <li><h3>Horchata</h3><p>Sweet, creamy and cinnamon-kissed.</p></li>
-              <li><h3>Orange Juice</h3><p>Bright, cold and the perfect start.</p></li>
-            </ul>
-          </div>
-        </div>
-
-        <div class="menu__foot" data-reveal>
-          <p class="menu__note">Ask about our daily specials. Menu and prices may vary.</p>
-          <a class="btn btn--primary" href="#order-online" data-order-link target="_blank" rel="noopener">Order for pickup</a>
         </div>
       </div>
     </section>
@@ -313,15 +379,21 @@
     <section class="section story" id="story" aria-labelledby="story-title">
       <div class="container story__grid">
         <figure class="story__media" data-reveal>
+          <span class="tape tape--l" aria-hidden="true"></span>
+          <span class="tape tape--r" aria-hidden="true"></span>
           <div class="story__frame">
             <img data-parallax src="img/sign-600.jpg" srcset="img/sign-600.jpg 600w, img/sign-1000.jpg 1000w" sizes="(min-width: 960px) 38vw, 92vw" width="600" height="800" loading="lazy" decoding="async" alt="The round Patron Breakfast Diner sign, reading Breakfast Lunch Dinner, est. 2024, on a warm wood-paneled wall">
           </div>
+          <figcaption class="note" aria-hidden="true">
+            <span>our happy place<br>since 2024!</span>
+            <svg viewBox="0 0 120 90"><path d="M110 8 C 90 40, 60 70, 14 74 M14 74 l14 -12 M14 74 l16 8"/></svg>
+          </figcaption>
         </figure>
 
         <div class="story__copy">
           <p class="eyebrow" data-reveal>Our diner</p>
-          <h2 id="story-title" data-reveal>Like stepping into the <em>diners we remember</em>.</h2>
-          <p data-reveal>Walk into Patron Breakfast Diner and you'll feel like you've gone back in time. There's warm wood on the walls, a coffee cup that's never empty, and a table set for friends and family.</p>
+          <h2 id="story-title" data-reveal>Like stepping into the <span class="script">diners we remember</span>.</h2>
+          <p class="story__lead" data-reveal>Walk into Patron Breakfast Diner and you'll feel like you've gone back in time. There's warm wood on the walls, a coffee cup that's never empty, and a table set for friends and family.</p>
           <p data-reveal>We opened in 2024 with one simple promise: start your day right. That means real food made fresh, whether you're craving a stack of pancakes, a bowl of menudo, or a burger before the afternoon rush.</p>
           <dl class="facts" data-reveal>
             <div><dt>Opened</dt><dd>2024</dd></div>
@@ -337,40 +409,55 @@
       <div class="catering__bg" aria-hidden="true">
         <img data-parallax src="img/nachos-800.jpg" srcset="img/nachos-800.jpg 800w, img/nachos-1400.jpg 1400w" sizes="100vw" alt="" loading="lazy" decoding="async">
       </div>
+      <svg class="picado picado--banner" viewBox="0 0 1200 110" preserveAspectRatio="xMidYMin slice" aria-hidden="true">
+        <path class="picado__string" d="M-20 6 Q600 50 1220 6"/>
+        <g transform="translate(10 7)"><use href="#flag" class="flag f2" width="80" height="72"/></g>
+        <g transform="translate(110 13)"><use href="#flag" class="flag f4" width="80" height="72"/></g>
+        <g transform="translate(210 18)"><use href="#flag" class="flag f3" width="80" height="72"/></g>
+        <g transform="translate(310 22)"><use href="#flag" class="flag f5" width="80" height="72"/></g>
+        <g transform="translate(410 25)"><use href="#flag" class="flag f1" width="80" height="72"/></g>
+        <g transform="translate(510 26)"><use href="#flag" class="flag f2" width="80" height="72"/></g>
+        <g transform="translate(610 26)"><use href="#flag" class="flag f4" width="80" height="72"/></g>
+        <g transform="translate(710 25)"><use href="#flag" class="flag f3" width="80" height="72"/></g>
+        <g transform="translate(810 22)"><use href="#flag" class="flag f5" width="80" height="72"/></g>
+        <g transform="translate(910 18)"><use href="#flag" class="flag f1" width="80" height="72"/></g>
+        <g transform="translate(1010 13)"><use href="#flag" class="flag f2" width="80" height="72"/></g>
+        <g transform="translate(1110 7)"><use href="#flag" class="flag f4" width="80" height="72"/></g>
+      </svg>
       <div class="container catering__inner">
-        <p class="eyebrow eyebrow--light" data-reveal>Catering</p>
-        <h2 id="catering-title" data-reveal>Feeding a crowd? <em>We've got the spread.</em></h2>
-        <p data-reveal>From corporate breakfasts to family reunions, we'll bring your favorites from our kitchen to yours, customized to fit your event.</p>
-        <ul class="catering__list" role="list" data-reveal>
-          <li>Corporate meetings</li><li>Family reunions</li><li>Birthdays &amp; parties</li><li>Church &amp; team events</li>
-        </ul>
-        <div class="catering__actions" data-reveal>
-          <a class="btn btn--sun" href="tel:+12815494941">Call to plan your event</a>
+        <div class="catering__copy">
+          <p class="eyebrow eyebrow--light" data-reveal>Catering</p>
+          <h2 id="catering-title" data-reveal>Feeding a crowd? <span class="script">We've got the spread.</span></h2>
+          <p data-reveal>From corporate breakfasts to family reunions, we'll bring your favorites from our kitchen to yours, customized to fit your event.</p>
+          <ul class="catering__list" role="list" data-reveal>
+            <li>Corporate meetings</li><li>Family reunions</li><li>Birthdays &amp; parties</li><li>Church &amp; team events</li>
+          </ul>
+          <div class="catering__actions" data-reveal>
+            <a class="btn btn--sun btn--lg" href="tel:+12815494941"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call to plan your event</a>
+          </div>
         </div>
       </div>
     </section>
 
     <!-- ============ VISIT ============ -->
-    <section class="section visit" id="visit" aria-labelledby="visit-title">
+    <section class="section visit grain" id="visit" aria-labelledby="visit-title">
       <div class="container visit__grid">
         <div class="visit__info">
           <p class="eyebrow" data-reveal>Visit us</p>
-          <h2 id="visit-title" data-reveal>Better yet, see us <em>in person</em>.</h2>
+          <h2 id="visit-title" data-reveal>Better yet, see us <span class="script">in person</span>.</h2>
 
           <div class="visit__cards">
             <div class="vcard" data-reveal style="--i:0">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="9.5" r="2.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+              <span class="vcard__icon"><svg aria-hidden="true"><use href="#i-pin"/></svg></span>
               <div>
                 <h3>Find us</h3>
                 <address>1201 N Hwy 146, Suite A<br>Kemah, Texas 77565</address>
-                <a class="link-arrow" href="https://www.google.com/maps/dir/?api=1&destination=1201+N+Hwy+146+Suite+A+Kemah+TX+77565" target="_blank" rel="noopener">Directions
-                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17 17 7M9 7h8v8" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                </a>
+                <a class="link-arrow" href="https://www.google.com/maps/dir/?api=1&destination=1201+N+Hwy+146+Suite+A+Kemah+TX+77565" target="_blank" rel="noopener">Directions <svg aria-hidden="true"><use href="#i-arrow-ne"/></svg></a>
               </div>
             </div>
 
             <div class="vcard" data-reveal style="--i:1">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 7.5V12l3 2" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+              <span class="vcard__icon vcard__icon--sun"><svg aria-hidden="true"><use href="#i-clock"/></svg></span>
               <div>
                 <h3>Hours</h3>
                 <p>Every day<br><strong>7:00 am – 3:00 pm</strong></p>
@@ -379,7 +466,7 @@
             </div>
 
             <div class="vcard" data-reveal style="--i:2">
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span class="vcard__icon vcard__icon--coral"><svg aria-hidden="true"><use href="#i-phone"/></svg></span>
               <div>
                 <h3>Call ahead</h3>
                 <p><a class="phone" href="tel:+12815494941">281-549-4941</a></p>
@@ -390,9 +477,20 @@
         </div>
 
         <div class="visit__map" data-reveal>
-          <iframe title="Map showing Patron Breakfast Diner at 1201 N Hwy 146, Kemah, Texas"
-                  src="https://www.google.com/maps?q=1201+N+Hwy+146+Suite+A,+Kemah,+TX+77565&output=embed"
-                  loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="visit__mapframe">
+            <iframe title="Map showing Patron Breakfast Diner at 1201 N Hwy 146, Kemah, Texas"
+                    src="https://www.google.com/maps?q=1201+N+Hwy+146+Suite+A,+Kemah,+TX+77565&output=embed"
+                    loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+          <div class="seal seal--stamp" aria-hidden="true">
+            <svg viewBox="0 0 200 200">
+              <defs><path id="seal-path-2" d="M100,100 m-74,0 a74,74 0 1,1 148,0 a74,74 0 1,1 -148,0"/></defs>
+              <circle cx="100" cy="100" r="98" class="seal__bg"/>
+              <circle cx="100" cy="100" r="90" class="seal__ring"/>
+              <g class="seal__spin"><text><textPath href="#seal-path-2" textLength="462">GREETINGS FROM KEMAH · TEXAS GULF COAST ·</textPath></text></g>
+              <use href="#i-sun" x="70" y="70" width="60" height="60" class="seal__icon"/>
+            </svg>
+          </div>
         </div>
       </div>
     </section>
@@ -400,37 +498,46 @@
 
   <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="container footer__inner">
-      <div class="footer__brand">
-        <p class="footer__name">Patron <em>Breakfast Diner</em></p>
-        <p>Start your day right.</p>
+    <svg class="footer__waves" viewBox="0 0 1440 60" preserveAspectRatio="none" aria-hidden="true"><path d="M0 30 C360 0 360 60 720 30 C1080 0 1080 60 1440 30 V0 H0Z"/></svg>
+    <div class="container">
+      <div class="footer__top">
+        <div class="footer__cta">
+          <p class="footer__kicker">Hungry yet?</p>
+          <a class="btn btn--sun btn--lg" href="#order-online" data-order-link target="_blank" rel="noopener">Order online <svg aria-hidden="true"><use href="#i-arrow-ne"/></svg></a>
+        </div>
+        <div class="footer__cols">
+          <div>
+            <h3>Visit</h3>
+            <p>1201 N Hwy 146, Suite A<br>Kemah, TX 77565</p>
+          </div>
+          <div>
+            <h3>Hours</h3>
+            <p>Every day<br>7am – 3pm</p>
+          </div>
+          <div>
+            <h3>Follow</h3>
+            <div class="footer__social">
+              <a href="https://www.facebook.com/profile.php?id=61558019933139" target="_blank" rel="noopener" aria-label="Patron Breakfast Diner on Facebook">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z" fill="currentColor"/></svg>
+              </a>
+              <a href="https://www.tiktok.com/@patronbreakfastdiner" target="_blank" rel="noopener" aria-label="Patron Breakfast Diner on TikTok">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.8 4 4v3.3a7.6 7.6 0 0 1-4-1.2V15a6 6 0 1 1-6-6h.6v3.4a2.7 2.7 0 1 0 2.1 2.6V3z" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="footer__social">
-        <a href="https://www.facebook.com/profile.php?id=61558019933139" target="_blank" rel="noopener" aria-label="Patron Breakfast Diner on Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H7v4h3v7h4v-7h3l1-4h-4V8.5a.5.5 0 0 1 .5-.5z" fill="currentColor"/></svg>
-        </a>
-        <a href="https://www.tiktok.com/@patronbreakfastdiner" target="_blank" rel="noopener" aria-label="Patron Breakfast Diner on TikTok">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M16.5 3c.4 2.3 1.9 3.8 4 4v3.3a7.6 7.6 0 0 1-4-1.2V15a6 6 0 1 1-6-6h.6v3.4a2.7 2.7 0 1 0 2.1 2.6V3z" fill="currentColor"/></svg>
-        </a>
-      </div>
-      <p class="footer__legal">© <span data-year>2026</span> Patron Breakfast Diner · 1201 N Hwy 146, Suite A, Kemah, TX 77565</p>
+
+      <p class="footer__word" aria-hidden="true">Patron<span>Breakfast Diner</span></p>
+      <p class="footer__legal">© <span data-year>2026</span> Patron Breakfast Diner · <a href="tel:+12815494941">281-549-4941</a></p>
     </div>
   </footer>
 
   <!-- Mobile quick actions -->
   <div class="quickbar" aria-label="Quick actions">
-    <a href="tel:+12815494941">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z" fill="currentColor"/></svg>
-      Call
-    </a>
-    <a class="quickbar__main" href="#order-online" data-order-link target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 7h12l-1 13H7zM9 7a3 3 0 0 1 6 0" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg>
-      Order
-    </a>
-    <a href="https://www.google.com/maps/dir/?api=1&destination=1201+N+Hwy+146+Suite+A+Kemah+TX+77565" target="_blank" rel="noopener">
-      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 21s-7-6.1-7-11.5A7 7 0 0 1 19 9.5C19 14.9 12 21 12 21z" fill="none" stroke="currentColor" stroke-width="2"/><circle cx="12" cy="9.5" r="2.5" fill="currentColor"/></svg>
-      Directions
-    </a>
+    <a href="tel:+12815494941"><svg aria-hidden="true"><use href="#i-phone"/></svg> Call</a>
+    <a class="quickbar__main" href="#order-online" data-order-link target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-bag"/></svg> Order</a>
+    <a href="https://www.google.com/maps/dir/?api=1&destination=1201+N+Hwy+146+Suite+A+Kemah+TX+77565" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg> Directions</a>
   </div>
 
   <script src="main.js" defer></script>
