@@ -44,15 +44,23 @@
     const get = (t) => Number(parts.find((p) => p.type === t).value);
     return get('hour') + get('minute') / 60;
   }
+  // Formats a whole-number hour (0-23) as a short 12-hour label, e.g. 7 -> "7am", 15 -> "3pm".
+  function formatHour(h) {
+    const period = h >= 12 ? 'pm' : 'am';
+    const hour12 = h % 12 === 0 ? 12 : h % 12;
+    return `${hour12}${period}`;
+  }
   function updateStatus() {
     const h = chicagoNow();
     const open = h >= OPEN_HOUR && h < CLOSE_HOUR;
     let text;
     if (open) {
       const minsLeft = Math.round((CLOSE_HOUR - h) * 60);
-      text = minsLeft <= 45 ? `Open now · closing soon (3pm)` : 'Open now · until 3pm';
+      const closeText = formatHour(CLOSE_HOUR);
+      text = minsLeft <= 45 ? `Open now · closing soon (${closeText})` : `Open now · until ${closeText}`;
     } else {
-      text = h < OPEN_HOUR ? 'Closed · opens today at 7am' : 'Closed · opens tomorrow at 7am';
+      const openText = formatHour(OPEN_HOUR);
+      text = h < OPEN_HOUR ? `Closed · opens today at ${openText}` : `Closed · opens tomorrow at ${openText}`;
     }
     $$('[data-status]').forEach((el) => {
       el.classList.toggle('is-open', open);
